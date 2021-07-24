@@ -3,4 +3,4 @@ Amob product detail web page
 
 ## Tech Stack
 
-<img src="https://w7.pngwing.com/pngs/581/330/png-transparent-logo-cascading-style-sheets-html5-css3-prags-html5-und-css3-der-meisterkurs-html5-css3-javascript-design-text-trademark-logo.png" style="float: left; margin-right: 10px;"/>
+<img src="https://images.velog.io/images/hanei100/post/09ec5209-8975-4b03-b1b6-9524c0831077/CSS3_and_HTML5_logos_and_wordmarks.svg" style="float: left; margin-right: 10px;"/>
