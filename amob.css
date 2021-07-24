@@ -1,0 +1,119 @@
+.colors ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 1100px;
+  max-width: 100%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: '국립박물관문화재단클래식B';
+}
+div.selector {
+  text-align: center;
+}
+/* ul li {
+  border: solid 4px #ddd;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 5em;
+  cursor: pointer;
+} */
+ul.filter li.red {
+  background: red;
+  align-items: center;
+  color: #fff;
+}
+ul.filter li.yellow {
+  background: yellow;
+}
+ul.filter li.blue {
+  background: blue;
+  color: #fff;
+}
+ul.filter li.white {
+  background: white;
+}
+ul.filter li.orange {
+  background: orange;
+  color: #fff;
+}
+ul.filter li.purple {
+  background: purple;
+  color: #fff;
+}
+ul.filter li.mint {
+  background: #bfe5d9;
+}
+ul.filter {
+  margin: 2em auto;
+  list-style: none; 
+}
+ul.filter-labels li{
+  display: inline-block;
+}
+ul.filter li {
+  padding: 12px;
+  font-size: 1em;
+  width: 5%;
+  height: 5%;
+  display: inline-flex;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  text-align: center;
+  align-items: center;
+  justify-content: center; 
+}
+p {
+  width: 1100px;
+  max-width: 100%;
+  display: block;
+  margin: 2em auto;
+}
+.post-slider {
+  max-width: 1000px;
+  max-height: max-content;
+  height: 500px;
+  margin: 0px auto;
+  position: relative;
+  font-size: 5em;
+  border: solid 4px #ddd;
+  list-style: none; 
+}
+.post-slider ul li img {
+  max-width: 100%;
+  
+  display: block;
+}
+.slick-arrow {
+  z-index: 2; /* prev버튼은 위치 이동시 이미지 뒤로 숨겨짐 */
+  position: absolute; /* 원하는 위치에 지정  */
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translateY(-25px);
+}
+.slick-prev.slick-arrow {
+  /* prev 이전 */
+  left: 0;
+}
+.slick-prev:before,
+.slick-next:before {
+  color: gray !important;
+}
+.slick-next.slick-arrow {
+  /* next 다음 */
+  right: 0;
+}
+
+/* 아래점 */
+.slick-dots {
+  text-align: center;
+}
+.slick-dots li {
+  display: inline-block;
+  border: 0px;
+  margin: 0 5px;
+}

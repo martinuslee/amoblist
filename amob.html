@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <title>test</title>
+    <style>
+@font-face {
+    font-family: '국립박물관문화재단클래식B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+    </style>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(function () {
+            $(".slider").slick({
+                slide: 'li',
+                autoplay: true,
+                infinite: true,
+                speed: 1000,
+                slidesToShow: 2, //// 한 화면에 보여질 컨텐츠 개수
+                slidesToScroll: 1,		//스크롤 한번에 움직일 컨텐츠 개수
+                dots: true,
+                arrows: true,
+                pauseOnHover: true, //// 슬라이드 이동	시 마우스 호버하면 슬라이더 멈추게 설정
+            });
+
+            $(".filter li").on("click", function () {
+                var filter = $(this).data("filter");
+                $(".slider").slick("slickUnfilter");
+
+                if (filter == "red") {
+                    $(".slider").slick("slickFilter", ".red");
+                } else if (filter == "yellow") {
+                    $(".slider").slick("slickFilter", ".yellow");
+                } else if (filter == "blue") {
+                    $(".slider").slick("slickFilter", ".blue");
+                }
+                else if (filter == "orange") {
+                    $(".slider").slick("slickFilter", ".orange");
+                }
+                else if (filter == "white") {
+                    $(".slider").slick("slickFilter", ".white");
+                }
+                else if (filter == "purple") {
+                    $(".slider").slick("slickFilter", ".purple");
+                } else if (filter == "mint") {
+                    $(".slider").slick("slickFilter", ".mint");
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="./amob.css">
+</head>
+
+<body>
+    <div class="colors">
+        <div class="selector">
+            <ul class="filter">
+                <li data-filter="red" class="red">Red</li>
+                <li data-filter="orange" class="orange">Orange</li>
+                <li data-filter="yellow" class="yellow">Yellow</li>
+                <li data-filter="blue" class="blue">Blue</li>
+                <li data-filter="purple" class="purple">Purple</li>
+                <li data-filter="mint" class="mint">Mint</li>
+                <li data-filter="white" class="white">White</li>
+            </ul>
+        </div>
+        <div class="post-slider">
+            <ul class="slider">
+                <li class="mint"><img src="./image/1.jpg"></li>
+                <li class="mint"><img src="./image/2.jpg"></li>
+                <li class="yellow">2</li>
+                <li class="blue">3</li>
+                <li class="yellow">5</li>
+                <li class="blue">6</li>
+                <li class="white">7</li>
+                <li class="purple">8</li>
+                <li class="white">9</li>
+                <li class="purple">10</li>
+                <li class="orange">11</li>
+                <li class="yellow">12</li>
+                <li class="mint"><img src="./image/5.jpg"></li>
+                <li class="blue">14</li>
+                <li class="white">15</li>
+                <li class="purple">16</li>
+                <li class="orange">17</li>
+                <li class="mint"><img src="./image/4.jpg"></li>
+                <li class="orange">18</li>
+                <li class="red">19</li>
+                <li class="red">20</li>
+                <li class="red">21</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
