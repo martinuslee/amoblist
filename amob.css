@@ -26,6 +26,7 @@ ul.filter li.red {
   align-items: center;
   color: #fff;
 }
+
 ul.filter li.yellow {
   background: yellow;
 }
@@ -41,7 +42,7 @@ ul.filter li.orange {
   color: #fff;
 }
 ul.filter li.purple {
-  background: purple;
+  background: #3d3861;
   color: #fff;
 }
 ul.filter li.mint {
@@ -84,8 +85,8 @@ p {
 }
 .post-slider ul li img {
   max-width: 100%;
-  
   display: block;
+  object-fit: cover;
 }
 .slick-arrow {
   z-index: 2; /* prev버튼은 위치 이동시 이미지 뒤로 숨겨짐 */

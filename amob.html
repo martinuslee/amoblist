@@ -3,12 +3,12 @@
 <head>
     <title>test</title>
     <style>
-@font-face {
-    font-family: '국립박물관문화재단클래식B';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+        @font-face {
+            font-family: '국립박물관문화재단클래식B';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
     </style>
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" />
@@ -35,7 +35,7 @@
             $(".filter li").on("click", function () {
                 var filter = $(this).data("filter");
                 $(".slider").slick("slickUnfilter");
-
+                /*
                 if (filter == "red") {
                     $(".slider").slick("slickFilter", ".red");
                 } else if (filter == "yellow") {
@@ -54,6 +54,12 @@
                 } else if (filter == "mint") {
                     $(".slider").slick("slickFilter", ".mint");
                 }
+                */
+
+                if (filter == "purple") {
+                    $(".slider").slick("slickFilter", ".purple");
+                }
+
             });
         });
     </script>
@@ -64,18 +70,18 @@
     <div class="colors">
         <div class="selector">
             <ul class="filter">
-                <li data-filter="red" class="red">Red</li>
-                <li data-filter="orange" class="orange">Orange</li>
-                <li data-filter="yellow" class="yellow">Yellow</li>
-                <li data-filter="blue" class="blue">Blue</li>
+                <!-- <li data-filter="red" class="red">Red</li> -->
+                <!-- <li data-filter="orange" class="orange">Orange</li> -->
+                <!-- <li data-filter="yellow" class="yellow">Yellow</li> -->
+                <!-- <li data-filter="blue" class="blue">Blue</li> -->
                 <li data-filter="purple" class="purple">Purple</li>
-                <li data-filter="mint" class="mint">Mint</li>
+                <!-- <li data-filter="mint" class="mint">Mint</li> -->
                 <li data-filter="white" class="white">White</li>
             </ul>
         </div>
         <div class="post-slider">
             <ul class="slider">
-                <li class="mint"><img src="./image/1.jpg"></li>
+                <!-- <li class="mint"><img src="./image/1.jpg"></li>
                 <li class="mint"><img src="./image/2.jpg"></li>
                 <li class="yellow">2</li>
                 <li class="blue">3</li>
@@ -96,7 +102,11 @@
                 <li class="orange">18</li>
                 <li class="red">19</li>
                 <li class="red">20</li>
-                <li class="red">21</li>
+                <li class="red">21</li> -->
+                <li class="purple"><img src="image/amobproduct1.jpeg" alt="product-image" /></li>
+                <li class="purple"><img src="image/amobproduct15.jpeg" alt="product-image" /></li>
+                <li class="purple"><img src="image/amobproduct16.jpeg" alt="product-image" /></li>
+                <li class="purple"><img src="image/amobproduct17.jpeg" alt="product-image" /></li>
             </ul>
         </div>
     </div>
