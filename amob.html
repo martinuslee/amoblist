@@ -35,12 +35,13 @@
             $(".filter li").on("click", function () {
                 var filter = $(this).data("filter");
                 $(".slider").slick("slickUnfilter");
-                /*
-                if (filter == "red") {
-                    $(".slider").slick("slickFilter", ".red");
-                } else if (filter == "yellow") {
-                    $(".slider").slick("slickFilter", ".yellow");
-                } else if (filter == "blue") {
+                
+                if (filter == "purple") {
+                    $(".slider").slick("slickFilter", ".purple");
+                } else if (filter == "white") {
+                    $(".slider").slick("slickFilter", ".white");
+                }
+                /* else if (filter == "blue") {
                     $(".slider").slick("slickFilter", ".blue");
                 }
                 else if (filter == "orange") {
@@ -55,11 +56,6 @@
                     $(".slider").slick("slickFilter", ".mint");
                 }
                 */
-
-                if (filter == "purple") {
-                    $(".slider").slick("slickFilter", ".purple");
-                }
-
             });
         });
     </script>
@@ -107,6 +103,10 @@
                 <li class="purple"><img src="image/amobproduct15.jpeg" alt="product-image" /></li>
                 <li class="purple"><img src="image/amobproduct16.jpeg" alt="product-image" /></li>
                 <li class="purple"><img src="image/amobproduct17.jpeg" alt="product-image" /></li>
+                <li class="white"><img src="image/amobproduct3.jpeg" alt="product-image" /></li>
+                <li class="white"><img src="image/amobproduct4.jpeg" alt="product-image" /></li>
+                <li class="white"><img src="image/amobproduct5.jpeg" alt="product-image" /></li>
+                
             </ul>
         </div>
     </div>
