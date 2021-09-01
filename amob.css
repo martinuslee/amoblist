@@ -37,6 +37,10 @@ ul.filter li.blue {
 ul.filter li.white {
   background: white;
 }
+ul.filter li.skyblue {
+  background: #abbedf;
+  color: #fff;
+}
 ul.filter li.orange {
   background: orange;
   color: #fff;
@@ -47,6 +51,10 @@ ul.filter li.purple {
 }
 ul.filter li.mint {
   background: #bfe5d9;
+}
+ul.filter li.black {
+  background: black;
+  color: #fff;
 }
 ul.filter {
   margin: 2em auto;
