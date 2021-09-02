@@ -1,15 +1,12 @@
 .colors ul {
   margin: 0;
   padding: 0;
-  list-style: none;
   width: 1100px;
   max-width: 100%;
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  font-family: '국립박물관문화재단클래식B';
 }
-div.selector {
+div#selector {
+  margin: 0 auto;
   text-align: center;
 }
 /* ul li {
@@ -21,12 +18,25 @@ div.selector {
   font-size: 5em;
   cursor: pointer;
 } */
+#selector > ul.filter {
+  margin: 2em auto;
+}
+#selector > ul.filter li {
+  padding: 12px;
+  width: 10%;
+  height: 10%;
+  margin: 0 auto;
+  display: inline-flex;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  text-align: center;
+  line-height: 150px;
+}
 ul.filter li.red {
   background: red;
   align-items: center;
   color: #fff;
 }
-
 ul.filter li.yellow {
   background: yellow;
 }
@@ -56,33 +66,6 @@ ul.filter li.black {
   background: black;
   color: #fff;
 }
-ul.filter {
-  margin: 2em auto;
-  list-style: none; 
-}
-ul.filter-labels li{
-  display: inline-block;
-}
-ul.filter li {
-  padding: 12px;
-  font-size: 1em;
-  width: 5%;
-  height: 5%;
-  display: inline-flex;
-  border-radius: 50%;
-  border: 2px solid #ddd;
-  text-align: center;
-  align-items: center;
-  justify-content: center; 
-}
-/*
-p {
-  width: 1100px;
-  max-width: 100%;
-  display: block;
-  margin: 2em auto;
-}
-*/
 .post-slider {
   max-width: 800px;
   /* max-height: max-content; */
@@ -92,14 +75,19 @@ p {
   font-size: 5em;
   /* border: solid 4px #ddd; */
   /* border: 1px solid rgba(255, 0, 0, .5); */
-  list-style: none; 
-  overflow:auto; 
+  list-style: none;
+  /*overflow: auto;*/
 }
 .post-slider ul li img {
   max-width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
+}
+.slick-slider {
+	display: table !important;
+	table-layout: fixed !important;
+	width: 100% !important;
 }
 .slick-arrow {
   z-index: 2; /* prev버튼은 위치 이동시 이미지 뒤로 숨겨짐 */
@@ -123,10 +111,17 @@ p {
 }
 
 /* 아래점 */
-.slick-dots {
+ul.slick-dots {
+  position: absolute;
+  bottom: 5px;
+  display: block;
+  width: 100%;
+  padding: 10;
+  margin: 0;
+  list-style: none;
   text-align: center;
 }
-.slick-dots li {
+ul.slick-dots li {
   display: inline-block;
   border: 0px;
   margin: 0 5px;

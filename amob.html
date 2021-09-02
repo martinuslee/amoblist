@@ -23,19 +23,38 @@
             $(".slider").slick({
                 slide: 'li',
                 autoplay: true,
+                mobileFirst: true,//add this one
                 infinite: true,
                 speed: 1000,
-                slidesToShow: 2, //// 한 화면에 보여질 컨텐츠 개수
+                //slidesToShow: 2, //// 한 화면에 보여질 컨텐츠 개수
                 slidesToScroll: 1,		//스크롤 한번에 움직일 컨텐츠 개수
                 dots: true,
                 arrows: true,
                 pauseOnHover: true, //// 슬라이드 이동	시 마우스 호버하면 슬라이더 멈추게 설정
+                responsive: [
+                    {
+                        breakpoint: 960, //화면 사이즈 960px
+                        settings: {
+                            //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                            slidesToShow: 2
+                        }
+                    },
+                    {
+                        breakpoint: 321, //화면 사이즈 321
+                        settings: {
+                            //위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+                            slidesToShow: 1
+                        }
+                    }
+                ]
             });
+
+
 
             $(".filter li").on("click", function () {
                 var filter = $(this).data("filter");
                 $(".slider").slick("slickUnfilter");
-                
+
                 if (filter == "purple") {
                     $(".slider").slick("slickFilter", ".purple");
                 } else if (filter == "white") {
@@ -64,44 +83,22 @@
 
 <body>
     <div class="colors">
-        <div class="selector">
+        <div class="selector" id="selector">
             <ul class="filter">
                 <!-- <li data-filter="red" class="red">Red</li> -->
                 <!-- <li data-filter="orange" class="orange">Orange</li> -->
                 <!-- <li data-filter="yellow" class="yellow">Yellow</li> -->
                 <!-- <li data-filter="blue" class="blue">Blue</li> -->
-                <li data-filter="purple" class="purple">Purple</li>
+                <li data-filter="purple" class="purple"></li>
                 <!-- <li data-filter="mint" class="mint">Mint</li> -->
-                <li data-filter="white" class="white">White</li>
-                <li data-filter="skyblue" class="skyblue">skyblue</li>
-                <li data-filter="orange" class="orange">orange</li>
-                <li data-filter="black" class="black">Black</li>
+                <li data-filter="white" class="white"></li>
+                <li data-filter="skyblue" class="skyblue"></li>
+                <li data-filter="orange" class="orange"></li>
+                <li data-filter="black" class="black"></li>
             </ul>
         </div>
         <div class="post-slider">
             <ul class="slider">
-                <!-- <li class="mint"><img src="./image/1.jpg"></li>
-                <li class="mint"><img src="./image/2.jpg"></li>
-                <li class="yellow">2</li>
-                <li class="blue">3</li>
-                <li class="yellow">5</li>
-                <li class="blue">6</li>
-                <li class="white">7</li>
-                <li class="purple">8</li>
-                <li class="white">9</li>
-                <li class="purple">10</li>
-                <li class="orange">11</li>
-                <li class="yellow">12</li>
-                <li class="mint"><img src="./image/5.jpg"></li>
-                <li class="blue">14</li>
-                <li class="white">15</li>
-                <li class="purple">16</li>
-                <li class="orange">17</li>
-                <li class="mint"><img src="./image/4.jpg"></li>
-                <li class="orange">18</li>
-                <li class="red">19</li>
-                <li class="red">20</li>
-                <li class="red">21</li> -->
                 <li class="purple"><img src="image/amobproduct15.jpeg" alt="product-image" /></li>
                 <li class="purple"><img src="image/amobproduct1.jpeg" alt="product-image" /></li>
                 <li class="purple"><img src="image/amobproduct16.jpeg" alt="product-image" /></li>
@@ -121,7 +118,7 @@
                 <li class="black"><img src="image/amobproduct18.jpeg" alt="product-image" /></li>
                 <li class="black"><img src="image/amobproduct19.jpeg" alt="product-image" /></li>
                 <li class="black"><img src="image/amobproduct20.jpeg" alt="product-image" /></li>
-                <li class="black"><img src="image/amobproduct2.jpeg" alt="product-image" /></li>                
+                <li class="black"><img src="image/amobproduct2.jpeg" alt="product-image" /></li>
             </ul>
         </div>
     </div>
