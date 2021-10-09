@@ -1,5 +1,8 @@
 # amoblist
 Amob product detail web page 
+Amob 쇼핑몰 외주 작업
+상품 상세 페이지에서 색상별 상품 이미지를 슬라이드로 제공
+고객은 원하는 컬러를 클릭하면 해당하는 컬러의 상품만 슬라이드 형식으로 볼 수 있다. 
 
 ## Tech Stack
 <div>
